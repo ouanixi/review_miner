@@ -1,0 +1,5 @@
+[*.sh]
+end_of_line = lf
+
+[Dockerfile]
+end_of_line = lf

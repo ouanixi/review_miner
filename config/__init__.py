@@ -1,0 +1,1 @@
+from config.app import default as app_config
