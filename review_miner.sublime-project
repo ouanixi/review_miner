@@ -1,0 +1,22 @@
+{
+	"build_systems":
+	[
+		{
+			"name": "Runserver",
+			"shell_cmd": "/home/ouanixi/Work/Honours/review_miner/venv/bin/python /home/ouanixi/Work/Honours/review_miner/manage.py runserver"
+		},
+		{
+			"file_regex": "^[ ]*File \"(...*?)\", line ([0-9]*)",
+			"name": "Anaconda Python Builder",
+			"selector": "source.python",
+			"shell_cmd": "\"python\" -u \"$file\""
+		}
+	],
+	"folders":
+	[
+		{
+			"path": "."
+		}
+	],
+	"virtualenv": "/home/ouanixi/Work/Honours/review_miner/venv"
+}

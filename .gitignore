@@ -94,3 +94,5 @@ ENV/
 
 /pickles
 /ml_models
+
+*.sublime-workspace

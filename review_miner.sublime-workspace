@@ -1,0 +1,554 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "review_miner.sublime-project",
+			"settings":
+			{
+				"buffer_size": 298,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "manage.py",
+			"settings":
+			{
+				"buffer_size": 248,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/api/__init__.py",
+			"settings":
+			{
+				"buffer_size": 119,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/api/sentiment.py",
+			"settings":
+			{
+				"buffer_size": 180,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "Runserver",
+	"build_system_choices":
+	[
+		[
+			[
+				[
+					"Anaconda Python Builder",
+					""
+				],
+				[
+					"Packages/Python/Python.sublime-build",
+					""
+				],
+				[
+					"Packages/Python/Python.sublime-build",
+					"Syntax Check"
+				]
+			],
+			[
+				"Anaconda Python Builder",
+				""
+			]
+		],
+		[
+			[
+				[
+					"Packages/Java/Ant.sublime-build",
+					""
+				],
+				[
+					"Packages/Java/JavaC.sublime-build",
+					""
+				]
+			],
+			[
+				"Packages/Java/JavaC.sublime-build",
+				""
+			]
+		],
+		[
+			[
+				[
+					"Packages/Python/Python.sublime-build",
+					""
+				],
+				[
+					"Packages/Python/Python.sublime-build",
+					"Syntax Check"
+				]
+			],
+			[
+				"Packages/Python/Python.sublime-build",
+				""
+			]
+		],
+		[
+			[
+				[
+					"Runserver",
+					""
+				],
+				[
+					"Packages/Python/Python.sublime-build",
+					""
+				],
+				[
+					"Packages/Python/Python.sublime-build",
+					"Syntax Check"
+				]
+			],
+			[
+				"Runserver",
+				""
+			]
+		]
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 496.0,
+		"last_filter": "install",
+		"selected_items":
+		[
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"package install",
+				"Package Control: Install Package"
+			],
+			[
+				"package Control: re",
+				"Package Control: Remove Package"
+			],
+			[
+				"javatar",
+				"Javatar: Browse Commands..."
+			]
+		],
+		"width": 1098.0
+	},
+	"console":
+	{
+		"height": 276.0,
+		"history":
+		[
+			"import urllib.request,os,hashlib; h = 'df21e130d211cfc94d9b0905775a7c0f' + '1e3d39e33b79698005270310898eea76'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/home/ouanixi/Work/Honours/review_miner",
+		"/home/ouanixi/Work/Honours/review_miner/app",
+		"/home/ouanixi/Work/Honours/review_miner/app/api"
+	],
+	"file_history":
+	[
+		"/home/ouanixi/Work/Honours/star_trainer/app/api/sentiment.py",
+		"/home/ouanixi/Work/Honours/review_miner/review_miner.sublime-workspace",
+		"/home/ouanixi/Work/Honours/review_miner/dataset/labeledTrainData.tsv",
+		"/home/ouanixi/Work/Honours/star_trainer/dataset/test",
+		"/home/ouanixi/Work/ds_python/stacks.py",
+		"/home/ouanixi/Work/ds_python/stacks",
+		"/home/ouanixi/Work/ds.py",
+		"/home/ouanixi/.bashrc",
+		"/home/ouanixi/.config/sublime-text-3/Packages/User/SublimeLinter.sublime-settings",
+		"/home/ouanixi/.config/sublime-text-3/Packages/User/Anaconda.sublime-settings",
+		"/home/ouanixi/Desktop/dice.param",
+		"/home/ouanixi/Desktop/dice.eprime",
+		"/home/ouanixi/Desktop/test.py",
+		"/home/ouanixi/Desktop/triangle_numbers.txt",
+		"/home/ouanixi/Work/Honours/star_trainer/notebooks/clean.py",
+		"/home/ouanixi/Work/Honours/star_trainer/dataset/my_reviews.csv",
+		"/home/ouanixi/Work/BuildingMachineLearningSystemsWithPython-second_edition/ch04/build_lda.py",
+		"/home/ouanixi/Work/Honours/spacytuts/notebook/Modern_NLP_in_Python.ipynb",
+		"/home/ouanixi/Dropbox/Year4/final_project/minutes/11_01_2017",
+		"/home/ouanixi/Dropbox/Year4/final_project/minutes/02_11_2016.txt",
+		"/home/ouanixi/Dropbox/Year4/final_project/minutes/26_10_2016.txt",
+		"/home/ouanixi/.cache/.fr-Hvgzib/examples/blackHole/mkparameters.py",
+		"/home/ouanixi/.cache/.fr-eQAsD9/examples/blackHole/blackhole.eprime",
+		"/home/ouanixi/.cache/.fr-dvzUjo/examples/carSequencing/carSequencing.eprime",
+		"/home/ouanixi/Work/Honours/star_trainer/dataset/unigram_sentences.txt",
+		"/home/ouanixi/Dropbox/Year4/final_project/minutes/09_10_2016.txt",
+		"/home/ouanixi/Work/Honours/star_trainer/dataset/lemmatized_reviews.txt",
+		"/home/ouanixi/Desktop/dice.param.info",
+		"/home/ouanixi/.cache/.fr-0VCOTI/examples/sudoku/sudoku.eprime",
+		"/home/ouanixi/Desktop/dice.param.solution",
+		"/home/ouanixi/Desktop/dice.param.infor",
+		"/home/ouanixi/.cache/.fr-Pzy95R/examples/graphColouring/graphColouring.eprime",
+		"/home/ouanixi/.cache/.fr-LOWp0k/examples/sudoku/sudoku.eprime",
+		"/home/ouanixi/Desktop/dice.param.minion",
+		"/home/ouanixi/.cache/.fr-gXV696/examples/n_queens/n_queens.eprime",
+		"/home/ouanixi/.cache/.fr-wMwjXI/examples/graphColouring/1-FullIns_4.col.param",
+		"/home/ouanixi/.cache/.fr-vMj6HN/examples/efpa/efpa.eprime",
+		"/home/ouanixi/.cache/.fr-G2kUNb/examples/killerSudoku/killer.eprime",
+		"/home/ouanixi/.cache/.fr-7UZGaW/examples/tickTackToe/tickTackToe.eprime",
+		"/home/ouanixi/.cache/.fr-fOJRK2/examples/n_queens/n_queens.eprime",
+		"/home/ouanixi/Programs/savilerow-1.6.4-linux/quickstart",
+		"/home/ouanixi/Downloads/savilerow-1.6.4-linux/quickstart",
+		"/home/ouanixi/.cache/.fr-4RZ3vm/examples/knights/knights.eprime",
+		"/home/ouanixi/.cache/.fr-BHI3T4/examples/n_queens/n_queens.eprime",
+		"/home/ouanixi/.cache/.fr-S7zqfm/examples/sudoku/sudoku.eprime",
+		"/home/ouanixi/.cache/.fr-RUGgiW/examples/sudoku/sudoku.param",
+		"/home/ouanixi/.cache/.fr-SWkAdj/examples/n_queens2/n_queens2.eprime",
+		"/home/ouanixi/.cache/.fr-lNplmb/examples/knights/knights_4.param",
+		"/home/ouanixi/.cache/.fr-Jw4Zt2/ProblemSetSolutions/n_queens/n_queens.eprime",
+		"/home/ouanixi/.cache/.fr-3NqKhw/ProblemSetSolutions/farm_puzzle/farm_puzzle1.eprime",
+		"/home/ouanixi/.cache/.fr-kFz0lY/ProblemSetSolutions/Zebra/zebra.eprime",
+		"/home/ouanixi/.cache/.fr-Od9sx8/ProblemSetSolutions/n_queens/n_queens.param",
+		"/home/ouanixi/.cache/.fr-ZUdQwj/examples/magicSequence/magicSequence.eprime",
+		"/home/ouanixi/Work/Honours/star_trainer/notebooks/bigram_sentences.txt",
+		"/home/ouanixi/Work/Honours/reviews_miner/scripts/mongo_rev.py",
+		"/home/ouanixi/Work/Honours/star_trainer/dataset/labeledTrainData.tsv",
+		"/home/ouanixi/Work/review/air.byss.mobi.instaplacefree/air.byss.mobi.instaplacefree_2.txt",
+		"/home/ouanixi/Work/meta/ac.lite.json",
+		"/home/ouanixi/.cache/.fr-NxNbDP/meta/air.CelebrityRarePhoto.json",
+		"/home/ouanixi/.cache/.fr-l6IQjB/datasets/templerun2/trainL/info.txt",
+		"/home/ouanixi/Work/Honours/spacytuts/intermediate/review_text_all.txt",
+		"/home/ouanixi/Work/Honours/star_trainer/dataset/inf_reviews.csv",
+		"/home/ouanixi/Work/Honours/spacytuts/data/yelp_dataset_challenge_academic_dataset/yelp_academic_dataset_checkin.json",
+		"/home/ouanixi/Work/Honours/star_trainer/notebooks/unigram_sentences_all",
+		"/home/ouanixi/Dropbox/Year4/final_project/reading_notes.txt",
+		"/home/ouanixi/Dropbox/Year4/final_project/texput.log",
+		"/home/ouanixi/Downloads/AWSCloudFormation-samples/EC2InstanceWithSecurityGroupSample.template",
+		"/home/ouanixi/Work/Honours/star_trainer/dataset/rootkey.csv",
+		"/home/ouanixi/Documents/coursera_financial_aid.txt",
+		"/home/ouanixi/Downloads/AWSCloudFormation-samples/S3_Website_With_CloudFront_Distribution.template",
+		"/home/ouanixi/Downloads/AWSCloudFormation-samples/SQS_With_CloudWatch_Alarms.template",
+		"/home/ouanixi/Work/Honours/reviews_miner/scripts/my_reviews.csv",
+		"/home/ouanixi/cronjob.log",
+		"/home/ouanixi/Work/Honours/star_trainer/dataset/reviews.csv",
+		"/home/ouanixi/.cache/.fr-Eqh1w9/example-flask-python3.5/Dockerfile",
+		"/home/ouanixi/Work/Honours/inf-trainer/README.md",
+		"/home/ouanixi/Work/erlang/pis.erl",
+		"/home/ouanixi/Work/erlang/unique.erl",
+		"/home/ouanixi/Work/erlang/ccharcount.erl",
+		"/home/ouanixi/Work/reviews_miner/datasets/inf_reviews.csv",
+		"/home/ouanixi/Documents/ExamplesAnd Code/ccharcount.erl",
+		"/home/ouanixi/Work/erlang/wordcount.erl",
+		"/home/ouanixi/Documents/Erlang Example Answers/Erlang-Assignment-master/word_counter.erl",
+		"/home/ouanixi/Documents/Erlang Example Answers/erlang-exercises-master/charcount.erl",
+		"/home/ouanixi/Documents/ExamplesAnd Code/charcount.erl",
+		"/home/ouanixi/Documents/Erlang Example Answers/SoC-Big-Data-assignment-Erlang-master/bdata3.erl",
+		"/home/ouanixi/Documents/Erlang Example Answers/erlang-exercises-master/list.erl",
+		"/home/ouanixi/Documents/Erlang Example Answers/erlang-exercises-master/ccharcount.erl",
+		"/home/ouanixi/Dropbox/Year4/erlang/assignment.erl",
+		"/home/ouanixi/Documents/Erlang Example Answers/SoC-Big-Data-assignment-Erlang-master/bdata1.erl",
+		"/home/ouanixi/Documents/Erlang Example Answers/SoC-Big-Data-assignment-Erlang-master/bdata2.erl",
+		"/home/ouanixi/Dropbox/Year4/erlang/pis.erl",
+		"/home/ouanixi/Downloads/Yousician Launcher/version.txt",
+		"/home/ouanixi/Dropbox/Vision Assignment/Results/PartB/hist_only.txt",
+		"/home/ouanixi/Dropbox/Vision Assignment/Results/PartB/edges_only.txt",
+		"/home/ouanixi/Dropbox/Vision Assignment/Results/PartB/hog_only.txt",
+		"/home/ouanixi/Dropbox/Vision Assignment/Results/PartB/corners_only.txt",
+		"/home/ouanixi/Dropbox/Vision Assignment/Results/PartB/hough_only.txt",
+		"/home/ouanixi/Work/reviews_miner/datasets/datasets/info_noninfo/merged_info.txt",
+		"/home/ouanixi/Work/reviews_miner/datasets/datasets/info_noninfo/merged_noninfo.txt",
+		"/home/ouanixi/Dropbox/Images/manmade_test.txt",
+		"/home/ouanixi/Work/image-composer/dataset/raw/natural_training.txt",
+		"/home/ouanixi/Work/image-composer/dataset/raw/manmade_training.txt",
+		"/home/ouanixi/Work/ml-washington/non_notebook/week2/helpers.py",
+		"/home/ouanixi/Work/ml-washington/non_notebook/week2/assignment.py",
+		"/home/ouanixi/Work/reviews_miner/datasets/panichella-SURF-29332ec/SURF_replication_package/README.txt",
+		"/home/ouanixi/Work/reviews_miner/datasets/datasets/readme.txt",
+		"/home/ouanixi/Work/image-composer/app/partB/edges_only_test.csv",
+		"/home/ouanixi/Work/image-composer/app/partB/edges_only_train.csv",
+		"/home/ouanixi/Work/image-composer/app/partB/train_nn.py",
+		"/home/ouanixi/Work/image-composer/dataset/raw/natural_test.txt",
+		"/home/ouanixi/Work/image-composer/dataset/raw/manmade_test.txt",
+		"/home/ouanixi/Work/image-composer/dataset/index/histogram.index",
+		"/home/ouanixi/Work/ReplicationpackageDECA/ReplicationpackageDECA/Training data/1 training setWeka.arff",
+		"/home/ouanixi/Work/ReplicationpackageDECA/ReplicationpackageDECA/Test sets/test set 1 cicloWeka.arff",
+		"/home/ouanixi/Work/ReplicationpackageDECA/ReplicationpackageDECA/Training data/1_2training setWeka.arff",
+		"/home/ouanixi/Work/ARDOC-last-version/ARDOC-last-version/README.txt",
+		"/home/ouanixi/Work/ReplicationpackageDECA/ReplicationpackageDECA/Training data/1_2_3training setWeka.arff",
+		"/home/ouanixi/Work/PowernAPPWindows.txt",
+		"/home/ouanixi/Work/reviews_miner/datasets/datasets/all/info.txt",
+		"/home/ouanixi/Work/reviews_miner/datasets/datasets/swiftkey/trainU/unlabeled.txt",
+		"/home/ouanixi/Work/reviews_miner/datasets/datasets/facebook/trainL/info.txt",
+		"/home/ouanixi/Work/reviews_miner/datasets/datasets/all/trainL/non-info.txt",
+		"/home/ouanixi/Work/reviews_miner/datasets/datasets/swiftkey/trainL/non-info.txt",
+		"/home/ouanixi/Work/reviews_miner/datasets/datasets/facebook/trainL/non-info.txt",
+		"/home/ouanixi/Work/reviews_miner/datasets/datasets/swiftkey/swiftkey-case.txt",
+		"/home/ouanixi/Work/reviews_miner/datasets/datasets/swiftkey/test/info.txt",
+		"/home/ouanixi/Work/reviews_miner/datasets/datasets/facebook/trainU/unlabeled.txt"
+	],
+	"find":
+	{
+		"height": 163.0
+	},
+	"find_in_files":
+	{
+		"height": 371.0,
+		"where_history":
+		[
+			"/home/ouanixi/Work/google-play-api"
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"ResultListNew",
+			"JobsLeft",
+			"procesSpawner",
+			"out_manmade_1k",
+			"out_natural_1k",
+			"out_manmade_1k",
+			"Error requesting Google Play",
+			"<",
+			"gplay",
+			"gzip",
+			"moz",
+			"moz-do-not-send",
+			"src",
+			"}\n"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 3,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "review_miner.sublime-project",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 298,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								287,
+								287
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JSON.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "manage.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 248,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								248,
+								248
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "app/api/__init__.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 119,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								119,
+								119
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "app/api/sentiment.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 180,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								180,
+								180
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 58.0
+	},
+	"input":
+	{
+		"height": 148.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 672.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "review_miner.sublime-project",
+	"replace":
+	{
+		"height": 112.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 692.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
