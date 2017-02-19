@@ -3,33 +3,66 @@
 	{
 		"selected_items":
 		[
+			[
+				"Sen",
+				"SentimentTrainer"
+			],
+			[
+				"fi",
+				"fit_transform\tfunction"
+			],
+			[
+				"data",
+				"data_col\tstatement"
+			],
+			[
+				"vec",
+				"vectoriser\tfunction"
+			],
+			[
+				"f",
+				"fit_transform"
+			],
+			[
+				"_get",
+				"_get_raw_train_test\tfunction"
+			]
 		]
 	},
 	"buffers":
 	[
 		{
-			"file": "review_miner.sublime-project",
+			"file": "app/utils/corpmaker.py",
 			"settings":
 			{
-				"buffer_size": 298,
+				"buffer_size": 3099,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "manage.py",
+			"file": "app/mltrainers/dataloaders.py",
 			"settings":
 			{
-				"buffer_size": 248,
+				"buffer_size": 2006,
+				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "app/api/__init__.py",
+			"file": "app/mltrainers/exceptions.py",
 			"settings":
 			{
-				"buffer_size": 119,
+				"buffer_size": 47,
 				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/home/ouanixi/Work/Honours/star_trainer/app/training/sentiment/sentiment_training.py",
+			"settings":
+			{
+				"buffer_size": 1004,
 				"line_ending": "Unix"
 			}
 		},
@@ -37,7 +70,7 @@
 			"file": "app/api/sentiment.py",
 			"settings":
 			{
-				"buffer_size": 180,
+				"buffer_size": 1038,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
@@ -122,13 +155,25 @@
 	"build_varint": "",
 	"command_palette":
 	{
-		"height": 496.0,
+		"height": 417.0,
 		"last_filter": "install",
 		"selected_items":
 		[
 			[
 				"install",
 				"Package Control: Install Package"
+			],
+			[
+				"remove",
+				"Package Control: Remove Package"
+			],
+			[
+				"remp",
+				"Package Control: Remove Package"
+			],
+			[
+				"package",
+				"Package Control: Remove Package"
 			],
 			[
 				"package install",
@@ -143,7 +188,7 @@
 				"Javatar: Browse Commands..."
 			]
 		],
-		"width": 1098.0
+		"width": 1054.0
 	},
 	"console":
 	{
@@ -166,10 +211,38 @@
 	[
 		"/home/ouanixi/Work/Honours/review_miner",
 		"/home/ouanixi/Work/Honours/review_miner/app",
-		"/home/ouanixi/Work/Honours/review_miner/app/api"
+		"/home/ouanixi/Work/Honours/review_miner/app/api",
+		"/home/ouanixi/Work/Honours/review_miner/app/utils",
+		"/home/ouanixi/Work/Honours/review_miner/tests"
 	],
 	"file_history":
 	[
+		"/home/ouanixi/Work/Honours/review_miner/app/api/sentiment.py",
+		"/home/ouanixi/Work/Honours/review_miner/app/mltrainers/trainers.py",
+		"/home/ouanixi/Work/Honours/review_miner/tests/app/test_helpers.py",
+		"/home/ouanixi/Work/Honours/review_miner/tests/test_helpers.py",
+		"/home/ouanixi/Work/Honours/review_miner/tests/app/test_healthcheck.py",
+		"/home/ouanixi/Work/Honours/star_trainer/app/training/sentiment/data_preparator.py",
+		"/home/ouanixi/Work/Honours/review_miner/app/mltrainers/helpers.py",
+		"/home/ouanixi/Work/Honours/star_trainer/app/utils/helpers.py",
+		"/home/ouanixi/Work/Honours/review_miner/config/app/default.py",
+		"/home/ouanixi/Work/Honours/review_miner/dataset/unigram_sentences_all.txt",
+		"/home/ouanixi/Work/Honours/review_miner/review_miner.sublime-project",
+		"/home/ouanixi/.config/sublime-text-3/Packages/Anaconda/Default (Linux).sublime-keymap",
+		"/home/ouanixi/.config/sublime-text-3/Packages/Anaconda/Anaconda.sublime-settings",
+		"/home/ouanixi/Work/Honours/review_miner/app/utils/generators.py",
+		"/home/ouanixi/Work/Honours/review_miner/app/utils/corpmaker.py",
+		"/home/ouanixi/.config/sublime-text-3/Packages/Jedi - Python autocompletion/sublime_jedi.sublime-settings",
+		"/home/ouanixi/.config/sublime-text-3/Packages/User/sublime_jedi.sublime-settings",
+		"/home/ouanixi/.config/sublime-text-3/Packages/User/SublimeLinter.sublime-settings",
+		"/home/ouanixi/Work/Honours/review_miner/manage.py",
+		"/home/ouanixi/Work/Honours/review_miner/app/mltrainers/mltrainers.py",
+		"/home/ouanixi/Work/Honours/review_miner/app/utils/nlpdata.py",
+		"/home/ouanixi/Work/Honours/star_trainer/app/utils/nlp_datamaker.py",
+		"/home/ouanixi/Work/Honours/review_miner/app/dataloader/__init__.py",
+		"/home/ouanixi/Work/Honours/review_miner/app/dataloader/dataloaders.py",
+		"/home/ouanixi/Work/Honours/review_miner/.gitignore",
+		"/home/ouanixi/Work/Honours/review_miner/app/api/__init__.py",
 		"/home/ouanixi/Work/Honours/star_trainer/app/api/sentiment.py",
 		"/home/ouanixi/Work/Honours/review_miner/review_miner.sublime-workspace",
 		"/home/ouanixi/Work/Honours/review_miner/dataset/labeledTrainData.tsv",
@@ -178,7 +251,6 @@
 		"/home/ouanixi/Work/ds_python/stacks",
 		"/home/ouanixi/Work/ds.py",
 		"/home/ouanixi/.bashrc",
-		"/home/ouanixi/.config/sublime-text-3/Packages/User/SublimeLinter.sublime-settings",
 		"/home/ouanixi/.config/sublime-text-3/Packages/User/Anaconda.sublime-settings",
 		"/home/ouanixi/Desktop/dice.param",
 		"/home/ouanixi/Desktop/dice.eprime",
@@ -272,32 +344,7 @@
 		"/home/ouanixi/Work/reviews_miner/datasets/datasets/info_noninfo/merged_noninfo.txt",
 		"/home/ouanixi/Dropbox/Images/manmade_test.txt",
 		"/home/ouanixi/Work/image-composer/dataset/raw/natural_training.txt",
-		"/home/ouanixi/Work/image-composer/dataset/raw/manmade_training.txt",
-		"/home/ouanixi/Work/ml-washington/non_notebook/week2/helpers.py",
-		"/home/ouanixi/Work/ml-washington/non_notebook/week2/assignment.py",
-		"/home/ouanixi/Work/reviews_miner/datasets/panichella-SURF-29332ec/SURF_replication_package/README.txt",
-		"/home/ouanixi/Work/reviews_miner/datasets/datasets/readme.txt",
-		"/home/ouanixi/Work/image-composer/app/partB/edges_only_test.csv",
-		"/home/ouanixi/Work/image-composer/app/partB/edges_only_train.csv",
-		"/home/ouanixi/Work/image-composer/app/partB/train_nn.py",
-		"/home/ouanixi/Work/image-composer/dataset/raw/natural_test.txt",
-		"/home/ouanixi/Work/image-composer/dataset/raw/manmade_test.txt",
-		"/home/ouanixi/Work/image-composer/dataset/index/histogram.index",
-		"/home/ouanixi/Work/ReplicationpackageDECA/ReplicationpackageDECA/Training data/1 training setWeka.arff",
-		"/home/ouanixi/Work/ReplicationpackageDECA/ReplicationpackageDECA/Test sets/test set 1 cicloWeka.arff",
-		"/home/ouanixi/Work/ReplicationpackageDECA/ReplicationpackageDECA/Training data/1_2training setWeka.arff",
-		"/home/ouanixi/Work/ARDOC-last-version/ARDOC-last-version/README.txt",
-		"/home/ouanixi/Work/ReplicationpackageDECA/ReplicationpackageDECA/Training data/1_2_3training setWeka.arff",
-		"/home/ouanixi/Work/PowernAPPWindows.txt",
-		"/home/ouanixi/Work/reviews_miner/datasets/datasets/all/info.txt",
-		"/home/ouanixi/Work/reviews_miner/datasets/datasets/swiftkey/trainU/unlabeled.txt",
-		"/home/ouanixi/Work/reviews_miner/datasets/datasets/facebook/trainL/info.txt",
-		"/home/ouanixi/Work/reviews_miner/datasets/datasets/all/trainL/non-info.txt",
-		"/home/ouanixi/Work/reviews_miner/datasets/datasets/swiftkey/trainL/non-info.txt",
-		"/home/ouanixi/Work/reviews_miner/datasets/datasets/facebook/trainL/non-info.txt",
-		"/home/ouanixi/Work/reviews_miner/datasets/datasets/swiftkey/swiftkey-case.txt",
-		"/home/ouanixi/Work/reviews_miner/datasets/datasets/swiftkey/test/info.txt",
-		"/home/ouanixi/Work/reviews_miner/datasets/datasets/facebook/trainU/unlabeled.txt"
+		"/home/ouanixi/Work/image-composer/dataset/raw/manmade_training.txt"
 	],
 	"find":
 	{
@@ -316,6 +363,12 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"train_",
+			"df_train",
+			"bigram_sentence",
+			"self",
+			"filepath",
+			"nlp",
 			"ResultListNew",
 			"JobsLeft",
 			"procesSpawner",
@@ -347,32 +400,49 @@
 	"groups":
 	[
 		{
-			"selected": 3,
+			"selected": 4,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "review_miner.sublime-project",
+					"file": "app/utils/corpmaker.py",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 298,
+						"buffer_size": 3099,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								287,
-								287
+								3010,
+								3010
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/JavaScript/JSON.sublime-syntax"
+							"auto_complete_triggers":
+							[
+								{
+									"characters": ".",
+									"selector": "source.python"
+								},
+								{
+									"characters": ".",
+									"selector": "source.python - string - constant.numeric"
+								},
+								{
+									"characters": ".",
+									"selector": "source.python - string - constant.numeric"
+								}
+							],
+							"syntax": "Packages/Python/Python.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 3808.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 3,
@@ -380,75 +450,64 @@
 				},
 				{
 					"buffer": 1,
-					"file": "manage.py",
+					"file": "app/mltrainers/dataloaders.py",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 248,
+						"buffer_size": 2006,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								248,
-								248
+								1579,
+								1579
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/Python/Python.sublime-syntax"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 2,
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "app/api/__init__.py",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 119,
-						"regions":
-						{
-						},
-						"selection":
-						[
+							"auto_complete_triggers":
 							[
-								119,
-								119
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Python/Python.sublime-syntax"
+								{
+									"characters": ".",
+									"selector": "source.python"
+								},
+								{
+									"characters": ".",
+									"selector": "source.python - string - constant.numeric"
+								},
+								{
+									"characters": ".",
+									"selector": "source.python - string - constant.numeric"
+								}
+							],
+							"syntax": "Packages/Python/Python.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 1462.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 1,
 					"type": "text"
 				},
 				{
-					"buffer": 3,
-					"file": "app/api/sentiment.py",
+					"buffer": 2,
+					"file": "app/mltrainers/exceptions.py",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 180,
+						"buffer_size": 47,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								180,
-								180
+								47,
+								47
 							]
 						],
 						"settings":
@@ -457,6 +516,66 @@
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "/home/ouanixi/Work/Honours/star_trainer/app/training/sentiment/sentiment_training.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1004,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								490,
+								490
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 405.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "app/api/sentiment.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1038,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								805,
+								805
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 544.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
@@ -498,13 +617,13 @@
 	"menu_visible": true,
 	"output.exec":
 	{
-		"height": 672.0
+		"height": 455.0
 	},
 	"output.find_results":
 	{
 		"height": 0.0
 	},
-	"pinned_build_system": "",
+	"pinned_build_system": "Runserver",
 	"project": "review_miner.sublime-project",
 	"replace":
 	{
@@ -522,21 +641,21 @@
 	},
 	"select_project":
 	{
-		"height": 0.0,
+		"height": 1238.0,
 		"last_filter": "",
 		"selected_items":
 		[
 		],
-		"width": 0.0
+		"width": 941.0
 	},
 	"select_symbol":
 	{
-		"height": 0.0,
+		"height": 876.0,
 		"last_filter": "",
 		"selected_items":
 		[
 		],
-		"width": 0.0
+		"width": 1428.0
 	},
 	"selected_group": 0,
 	"settings":
@@ -546,7 +665,7 @@
 	"show_open_files": true,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 692.0,
+	"side_bar_width": 645.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{

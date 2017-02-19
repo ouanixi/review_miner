@@ -1,0 +1,2 @@
+class NoPickleAvailable(Exception):
+    pass

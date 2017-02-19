@@ -95,4 +95,4 @@ ENV/
 /pickles
 /ml_models
 
-*.sublime-workspace
+review_miner.sublime-workspace
