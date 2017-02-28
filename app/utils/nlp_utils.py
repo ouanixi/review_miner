@@ -4,21 +4,11 @@ import os.path
 import re
 import string
 
-import spacy
 from gensim.models import Phrases
 from gensim.models.word2vec import LineSentence
 
 from app.utils import generators as gen
 from manage import app
-
-logger = logging.getLogger(__name__)
-logger.setLevel(logging.DEBUG)
-ch = logging.StreamHandler()
-ch.setLevel(logging.DEBUG)
-formatter = logging.Formatter(
-    '%(asctime)s - %(name)s - %(levelname)s - %(message)s')
-ch.setFormatter(formatter)
-logger.addHandler(ch)
 
 unigram_sentences_filepath = app.config['UNIGRAM_SENTENCES']
 bigram_sentences_filepath = app.config['BIGRAM_SENTENCES']
@@ -32,9 +22,7 @@ def make_corpus():
         1- unigram sentences
         2- bigram sentences
     """
-    # logger.info("making unigram sentences")
     # save_unigram_sentences(RAW_REVIEWS)
-    logger.info("making bigram sentences")
     save_bigram_sentences()
 
 
@@ -58,8 +46,7 @@ def save_bigram_sentences():
 
 
 def lemmatized_sentences_corpus(filename, remove_stop=False):
-    nlp = spacy.load('en')
-    for parsed_review in nlp.pipe(gen.load_csv(filename, 3),
+    for parsed_review in gen.NLP().nlp.pipe(gen.load_csv(filename, 3),
                                   batch_size=10000, n_threads=4):
         for sent in parsed_review.sents:
             yield u' '.join([token.lemma_ for token in sent
@@ -75,10 +62,8 @@ def punct_space(token, remove_stop=False):
 def get_bigram_model():
     model_exists = os.path.exists(bigram_model_filepath)
     if model_exists:
-        logger.info("Loading bigram model from file")
         bigram_model = Phrases.load(bigram_model_filepath)
     else:
-        logger.info("Creating new bigram model")
         unigram_sentences = get_unigram_sentences()
         bigram_model = Phrases(unigram_sentences)
         bigram_model.save(bigram_model_filepath)

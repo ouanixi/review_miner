@@ -9,6 +9,8 @@ from manage import app
 
 sentiment_classifier_filepath = app.config['SENTIMENT_MODEL']
 inf_classifier_filepath = app.config['INF_MODEL']
+inf_score_filepath = app.config['INF_SCORE']
+sentiment_score_filepath = app.config['SENTIMENT_SCORE']
 
 
 class Trainer:
@@ -28,16 +30,17 @@ class Trainer:
     def predict(self, X):
         return self.model.predict(X)
 
-    def score(self):
+    def _score(self):
         predicted = self.model.predict(self.X_test)
         precision = metrics.precision_score(self.y_test, predicted)
         recall = metrics.recall_score(self.y_test, predicted)
         accuracy = metrics.accuracy_score(self.y_test, predicted)
         f1_score = metrics.f1_score(self.y_test, predicted)
-        return {'precision': precision,
-                'recall': recall,
-                'accuracy': accuracy,
-                'f1_score': f1_score}
+        score = {'precision': precision,
+                 'recall': recall,
+                 'accuracy': accuracy,
+                 'f1_score': f1_score}
+        return score
 
 
 class SentimentTrainer(Trainer):
