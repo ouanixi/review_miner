@@ -1,6 +1,8 @@
 import codecs
 import logging
 import os.path
+import re
+import string
 
 import spacy
 from gensim.models import Phrases
@@ -95,6 +97,4 @@ def get_bigram_sentences():
 
 def remove_punctuation(text):
     text = str(text)
-    import re
-    import string
     return re.sub('[' + string.punctuation + ']', '', text)

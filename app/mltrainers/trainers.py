@@ -8,6 +8,7 @@ from app.mltrainers.exceptions import NoPickleAvailable
 from manage import app
 
 sentiment_classifier_filepath = app.config['SENTIMENT_MODEL']
+inf_classifier_filepath = app.config['INF_MODEL']
 
 
 class Trainer:
@@ -24,25 +25,6 @@ class Trainer:
     def train(self):
         raise NotImplementedError
 
-    def predict(self):
-        raise NotImplementedError
-
-    def score(self):
-        raise NotImplementedError
-
-
-class SentimentTrainer(Trainer):
-    @property
-    def model(self):
-        if os.path.exists(sentiment_classifier_filepath):
-            return joblib.load(sentiment_classifier_filepath)
-        raise NoPickleAvailable(
-            "No classifier avaiable")
-
-    def train(self):
-        clf = LogisticRegression(n_jobs=-2).fit(self.X_train, self.y_train)
-        joblib.dump(clf, sentiment_classifier_filepath)
-
     def predict(self, X):
         return self.model.predict(X)
 
@@ -56,3 +38,27 @@ class SentimentTrainer(Trainer):
                 'recall': recall,
                 'accuracy': accuracy,
                 'f1_score': f1_score}
+
+
+class SentimentTrainer(Trainer):
+    @property
+    def model(self):
+        if os.path.exists(sentiment_classifier_filepath):
+            return joblib.load(sentiment_classifier_filepath)
+        raise NoPickleAvailable("No classifier avaiable")
+
+    def train(self):
+        clf = LogisticRegression(n_jobs=-2).fit(self.X_train, self.y_train)
+        joblib.dump(clf, sentiment_classifier_filepath)
+
+
+class InfTrainer(Trainer):
+    @property
+    def model(self):
+        if os.path.exists(inf_classifier_filepath):
+            return joblib.load(inf_classifier_filepath)
+        raise NoPickleAvailable("No classifier avaiable")
+
+    def train(self):
+        clf = LogisticRegression(n_jobs=-2).fit(self.X_train, self.y_train)
+        joblib.dump(clf, inf_classifier_filepath)
