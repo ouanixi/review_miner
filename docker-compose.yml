@@ -9,8 +9,8 @@ services:
       - "8000"
     volumes:
       - /usr/src/app/static
-      - /usr/src/app/dataset
       - /usr/src/app/pickles
+      - /usr/src/app/ml_models
 
   nginx:
     restart: always

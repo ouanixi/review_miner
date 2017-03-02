@@ -10,16 +10,17 @@ from sklearn.feature_extraction.text import TfidfVectorizer
 
 from app.mltrainers.exceptions import NoPickleAvailable
 from app.utils import generators as gen
+from app.utils.generators import Singleton
 from app.utils import nlp_utils as cm
-from manage import app
+from config.app.default import *
 
-sentiment_vectoriser_filepath = app.config['SENTIMENT_VECTORISER']
-word2vec_filepath = app.config['WORD2VEC']
-bigram_sentences_filepath = app.config['BIGRAM_SENTENCES']
-cluster_model_filepath = app.config['KMEANS_MODEL']
-raw_reviews_filepath = app.config['RAW_REVIEWS']
-inf_sent_filepath = app.config['INF_SENTENCES']
-intent_sent_filepath = app.config['INTENT_SENTENCES']
+sentiment_vectoriser_filepath = SENTIMENT_VECTORISER
+word2vec_filepath = WORD2VEC
+bigram_sentences_filepath = BIGRAM_SENTENCES
+cluster_model_filepath = KMEANS_MODEL
+raw_reviews_filepath = RAW_REVIEWS
+inf_sent_filepath = INF_SENTENCES
+intent_sent_filepath = INTENT_SENTENCES
 
 logger = logging.getLogger(__name__)
 logger.setLevel(logging.DEBUG)
@@ -31,15 +32,16 @@ ch.setFormatter(formatter)
 logger.addHandler(ch)
 
 
-class DataLoader:
+class DataLoader(metaclass=Singleton):
     """ Interface exposing data preparation API """
 
     def __init__(self):
         self.filepath = None
         self.data = None
+        self.vectoriser = None
 
     @property
-    def vectoriser(self):
+    def get_vector(self):
         raise NotImplementedError
 
     def load_data(self):
@@ -58,7 +60,7 @@ class SentimentLoader(DataLoader):
         self.filepath = raw_reviews_filepath
 
     @property
-    def vectoriser(self):
+    def get_vector(self):
         if os.path.exists(sentiment_vectoriser_filepath):
             return joblib.load(sentiment_vectoriser_filepath)
         raise NoPickleAvailable(
@@ -89,10 +91,11 @@ class InfLoader(DataLoader):
     def __init__(self):
         super().__init__()
         self.filepath = inf_sent_filepath
-        self.word2vec = Word2vecLoader()
+        self.word2vec = None
+        self.bigram_model = None
 
     @property
-    def vectoriser(self):
+    def get_vector(self):
         if os.path.exists(cluster_model_filepath):
             clstr = joblib.load(cluster_model_filepath)
             return clstr
@@ -149,7 +152,7 @@ class InfLoader(DataLoader):
 
     def _make_clusers(self):
         logger.info("Clustering task started!")
-        clstr = KMeans(n_clusters=220, n_jobs=-2).fit(self.word2vec.model.wv.syn0)
+        clstr = KMeans(n_clusters=220, n_jobs=-2).fit(self.word2vec.wv.syn0)
         joblib.dump(clstr, cluster_model_filepath)
         logger.info("Clustering task completed!")
         return clstr
@@ -173,13 +176,12 @@ class InfLoader(DataLoader):
         return features
 
     def _prepare_for_train(self, new_sentences):
-        bigram_model = cm.get_bigram_model()
         for review in new_sentences:
             parsed_review = gen.NLP().nlp(review)
             unigram_review = [token.lemma_ for token in parsed_review
                               if not cm.punct_space(token)]
             # apply the first-order and second-order phrase models
-            bigram_review = bigram_model[unigram_review]
+            bigram_review = self.bigram_model[unigram_review]
             yield bigram_review
 
 
@@ -207,18 +209,22 @@ class IntentLoader(InfLoader):
             return 3
 
 
-class Word2vecLoader():
+class Word2vecLoader(metaclass=Singleton):
     def __init__(self):
-        self.data = cm.get_bigram_sentences()
+        self.data = None
+        self.model = None
 
     @property
-    def model(self):
+    def get_model(self):
         if os.path.exists(word2vec_filepath):
             app2vec = Word2Vec.load(word2vec_filepath)
             app2vec.init_sims(replace=False)
             return app2vec
         raise NoPickleAvailable(
             "No word2vec model trained! Train one first")
+
+    def load_data(self):
+        self.data = cm.get_bigram_sentences()
 
     def initialise(self):
         app2vec = Word2Vec(size=300, window=5, min_count=10, sg=1,

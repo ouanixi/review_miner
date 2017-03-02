@@ -1,5 +1,4 @@
 import codecs
-import logging
 import os.path
 import re
 import string
@@ -8,12 +7,12 @@ from gensim.models import Phrases
 from gensim.models.word2vec import LineSentence
 
 from app.utils import generators as gen
-from manage import app
+from config.app.default import *
 
-unigram_sentences_filepath = app.config['UNIGRAM_SENTENCES']
-bigram_sentences_filepath = app.config['BIGRAM_SENTENCES']
-bigram_model_filepath = app.config['BIGRAM_MODEL']
-RAW_REVIEWS = app.config['RAW_REVIEWS']
+unigram_sentences_filepath = UNIGRAM_SENTENCES
+bigram_sentences_filepath = BIGRAM_SENTENCES
+bigram_model_filepath = BIGRAM_MODEL
+RAW_REVIEWS = RAW_REVIEWS
 
 
 def make_corpus():
@@ -30,7 +29,6 @@ def make_sentences(paragraph):
     parsed_review = gen.NLP().nlp(paragraph)
     for sent in parsed_review.sents:
         yield sent.text.lower()
-
 
 
 def save_unigram_sentences(filename):
@@ -54,7 +52,7 @@ def save_bigram_sentences():
 
 def lemmatized_sentences_corpus(filename, remove_stop=False):
     for parsed_review in gen.NLP().nlp.pipe(gen.load_csv(filename, 3),
-                                  batch_size=10000, n_threads=4):
+                                            batch_size=10000, n_threads=4):
         for sent in parsed_review.sents:
             yield u' '.join([token.lemma_ for token in sent
                              if not punct_space(token, remove_stop)])

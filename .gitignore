@@ -96,3 +96,8 @@ ENV/
 /ml_models
 
 review_miner.sublime-workspace
+
+# Elastic Beanstalk Files
+.elasticbeanstalk/*
+!.elasticbeanstalk/*.cfg.yml
+!.elasticbeanstalk/*.global.yml
