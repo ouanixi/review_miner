@@ -3,8 +3,10 @@ from flask import Flask
 
 
 def bootstrap():
-    instance_path = os.path.abspath(os.path.join(__file__, os.pardir, "config"))
-    app = Flask(__name__, instance_path=instance_path, instance_relative_config=True)
+    instance_path = os.path.abspath(os.path.join(__file__, os.pardir,
+                                                 "config"))
+    app = Flask(__name__, instance_path=instance_path,
+                instance_relative_config=True)
 
     load_app_config(app)
 

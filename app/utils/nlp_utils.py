@@ -26,6 +26,13 @@ def make_corpus():
     save_bigram_sentences()
 
 
+def make_sentences(paragraph):
+    parsed_review = gen.NLP().nlp(paragraph)
+    for sent in parsed_review.sents:
+        yield sent.text.lower()
+
+
+
 def save_unigram_sentences(filename):
     """ Saves unigram sentences to file."""
     with codecs.open(unigram_sentences_filepath, 'w',
