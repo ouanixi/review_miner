@@ -13,7 +13,6 @@ def healthcheck():
 def sentiment_score():
     classifier = request.args.get('classification', '')
     trainer = prepare_trainer(classifier)
-    trainer.train()
     return jsonify(trainer.score())
 
 

@@ -9,8 +9,10 @@ services:
       - "8000"
     volumes:
       - /usr/src/app/static
-      - /usr/src/app/pickles
-      - /usr/src/app/ml_models
+      - ./pickles:/usr/src/app/pickles
+      - ./ml_models:/usr/src/app/ml_models
+      - ./dataset:/user/src/app/dataset
+      - /usr/local/lib/python3.5/site-packages/spacy/data
 
   nginx:
     restart: always

@@ -12,7 +12,10 @@ from app.mltrainers.exceptions import NoPickleAvailable
 from app.utils import generators as gen
 from app.utils.generators import Singleton
 from app.utils import nlp_utils as cm
-from config.app.default import *
+from config.app.default import (SENTIMENT_VECTORISER, WORD2VEC,
+                                BIGRAM_SENTENCES, KMEANS_MODEL,
+                                RAW_REVIEWS, INF_SENTENCES,
+                                INTENT_SENTENCES)
 
 sentiment_vectoriser_filepath = SENTIMENT_VECTORISER
 word2vec_filepath = WORD2VEC
