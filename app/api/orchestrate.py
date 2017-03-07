@@ -1,3 +1,4 @@
+"""Intermediate module that interfaces between requets and internal classes."""
 import logging
 
 from sklearn.model_selection import train_test_split
@@ -19,10 +20,12 @@ logger.addHandler(ch)
 
 
 class ClassificationNotSupported(Exception):
+    """Expeption used when classification error is not supported."""
+
     pass
 
 
-def prepare_trainer(classification=None):
+def _prepare_trainer(classification=None):
     if classification == 'sentiment':
         dataloader = SentimentLoader()
         trainer = SentimentTrainer()
@@ -55,25 +58,25 @@ def prepare_trainer(classification=None):
     return trainer
 
 
-def summarise_reviews(reviews_list):
+def _summarise_reviews(reviews_list):
     for review_dict in reviews_list:
         logger.info("Analysing sentiments for reviewid {}".format(review_dict['id']))
-        review_dict['sentiment'] = analyse_sentiment(review_dict.get('review'))
+        review_dict['sentiment'] = _analyse_sentiment(review_dict.get('review'))
         logger.info("Analysing informative vs non informative sentences for reviewid {}".format(review_dict['id']))
-        review_dict['sentences'] = analyse_inf(review_dict['review'])
+        review_dict['sentences'] = _analyse_inf(review_dict['review'])
         logger.info("Analysing user intents for reviewid {}".format(review_dict['id']))
-        review_dict['intent'] = analyse_intent(review_dict['sentences'])
+        review_dict['intent'] = _analyse_intent(review_dict['sentences'])
     return reviews_list
 
 
-def analyse_sentiment(review):
+def _analyse_sentiment(review):
     trainer = SentimentTrainer()
     vector = sent_loader.transform([review])
     sentiment = trainer.predict(vector)
     return str(sentiment[0])
 
 
-def analyse_inf(review):
+def _analyse_inf(review):
     sentences = list(make_sentences(review))
     trainer = InfTrainer()
     matrix = inf_loader.transform(sentences)
@@ -82,7 +85,7 @@ def analyse_inf(review):
     return sent_dict
 
 
-def analyse_intent(review_sent_dict):
+def _analyse_intent(review_sent_dict):
     intent_dict = {}
     sentences = [sent for sent in review_sent_dict.keys() if review_sent_dict[sent] == "1"]
     if sentences:

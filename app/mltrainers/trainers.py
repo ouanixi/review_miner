@@ -1,3 +1,4 @@
+"""Exposes classes relevant to ML training."""
 import os.path
 
 from sklearn import metrics
@@ -14,7 +15,10 @@ intent_classifier_filepath = app.config['INTENT_MODEL']
 
 
 class Trainer:
+    """Abstract class."""
+
     def __init__(self, X_train=None, y_train=None, X_test=None, y_test=None):
+        """Constructor."""
         self.X_train = X_train
         self.y_train = y_train
         self.X_test = X_test
@@ -22,15 +26,19 @@ class Trainer:
 
     @property
     def model(self):
+        """Abstract method."""
         raise NotImplementedError
 
     def train(self):
+        """Abstract method."""
         raise NotImplementedError
 
     def predict(self, X):
+        """Concrete method."""
         return self.model.predict(X)
 
     def score(self):
+        """Concrete method."""
         predicted = self.model.predict(self.X_test)
         precision = metrics.precision_score(self.y_test, predicted)
         recall = metrics.recall_score(self.y_test, predicted)

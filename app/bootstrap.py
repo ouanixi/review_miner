@@ -8,6 +8,7 @@ inf_loader = InfLoader()
 intent_loader = IntentLoader()
 word2vec = Word2vecLoader()
 
+
 def bootstrap():
     instance_path = os.path.abspath(os.path.join(__file__, os.pardir,
                                                  "config"))
