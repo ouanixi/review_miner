@@ -1,3 +1,5 @@
+"""Bootstrap module building relevant app elements."""
+
 import os
 from flask import Flask
 from app.mltrainers.dataloaders import SentimentLoader, InfLoader, IntentLoader, Word2vecLoader
@@ -10,12 +12,13 @@ word2vec = Word2vecLoader()
 
 
 def bootstrap():
+    """Factory creating relevant objects persisting through the lifecycle of the app."""
     instance_path = os.path.abspath(os.path.join(__file__, os.pardir,
                                                  "config"))
     app = Flask(__name__, instance_path=instance_path,
                 instance_relative_config=True)
 
-    load_app_config(app)
+    _load_app_config(app)
     sent_loader.vectoriser = sent_loader.get_vector
     inf_loader.vectoriser = inf_loader.get_vector
     intent_loader.vectoriser = intent_loader.get_vector
@@ -32,7 +35,7 @@ def bootstrap():
     return app
 
 
-def load_app_config(app):
+def _load_app_config(app):
     app.config.from_object("config.app.default")
     app.config.from_envvar("APP_CONFIG", silent=True)
     app.config["VERSION"] = os.environ.get("VERSION", "local")

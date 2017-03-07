@@ -20,7 +20,7 @@ logger.addHandler(ch)
 
 
 class ClassificationNotSupported(Exception):
-    """Expeption used when classification error is not supported."""
+    """Exception used when classification error is not supported."""
 
     pass
 
@@ -60,11 +60,15 @@ def _prepare_trainer(classification=None):
 
 def _summarise_reviews(reviews_list):
     for review_dict in reviews_list:
-        logger.info("Analysing sentiments for reviewid {}".format(review_dict['id']))
-        review_dict['sentiment'] = _analyse_sentiment(review_dict.get('review'))
-        logger.info("Analysing informative vs non informative sentences for reviewid {}".format(review_dict['id']))
+        logger.info("Analysing sentiments for reviewid {}".format(
+            review_dict['id']))
+        review_dict['sentiment'] = _analyse_sentiment(
+            review_dict.get('review'))
+        logger.info("Analysing informative vs non informative sentences for reviewid {}".format(
+            review_dict['id']))
         review_dict['sentences'] = _analyse_inf(review_dict['review'])
-        logger.info("Analysing user intents for reviewid {}".format(review_dict['id']))
+        logger.info("Analysing user intents for reviewid {}".format(
+            review_dict['id']))
         review_dict['intent'] = _analyse_intent(review_dict['sentences'])
     return reviews_list
 
@@ -87,7 +91,8 @@ def _analyse_inf(review):
 
 def _analyse_intent(review_sent_dict):
     intent_dict = {}
-    sentences = [sent for sent in review_sent_dict.keys() if review_sent_dict[sent] == "1"]
+    sentences = [sent for sent in review_sent_dict.keys()
+                 if review_sent_dict[sent] == "1"]
     if sentences:
         trainer = IntentTrainer()
         matrix = intent_loader.transform(sentences)

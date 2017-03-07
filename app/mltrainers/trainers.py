@@ -52,13 +52,17 @@ class Trainer:
 
 
 class SentimentTrainer(Trainer):
+    """Concrete Sentiment Trainer class."""
+
     @property
     def model(self):
+        """Load classifier if exists."""
         if os.path.exists(sentiment_classifier_filepath):
             return joblib.load(sentiment_classifier_filepath)
         raise NoPickleAvailable("No classifier avaiable")
 
     def train(self):
+        """Train classifier and save serialized object to file."""
         clf = LogisticRegression(n_jobs=-2).fit(self.X_train, self.y_train)
         joblib.dump(clf, sentiment_classifier_filepath)
 
