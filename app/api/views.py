@@ -8,7 +8,6 @@ import json
 def healthcheck():
     return "Congratulations! You have successfully launched your project"
 
-
 @api.route("/score")
 def sentiment_score():
     classifier = request.args.get('classification', '')
