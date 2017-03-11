@@ -9,6 +9,8 @@ from app.mltrainers.helpers import balance_data
 from app.mltrainers.trainers import SentimentTrainer, InfTrainer, IntentTrainer
 from app.utils.nlp_utils import make_sentences
 
+from app.utils.topic_extractor import calculate_topic
+
 logger = logging.getLogger(__name__)
 logger.setLevel(logging.DEBUG)
 ch = logging.StreamHandler()
@@ -66,7 +68,8 @@ def _summarise_reviews(reviews_list):
             review_dict.get('review'))
         logger.info("Analysing informative vs non informative sentences for reviewid {}".format(
             review_dict['id']))
-        review_dict['sentences'] = _analyse_inf(review_dict['review'])
+        review_dict['sentences'], review_dict['topics'] = _analyse_inf(
+            review_dict['review'])
         logger.info("Analysing user intents for reviewid {}".format(
             review_dict['id']))
         review_dict['intent'] = _analyse_intent(review_dict['sentences'])
@@ -84,9 +87,10 @@ def _analyse_inf(review):
     sentences = list(make_sentences(review))
     trainer = InfTrainer()
     matrix = inf_loader.transform(sentences)
+    topics = _analyse_topics(matrix)
     inf = trainer.predict(matrix)
     sent_dict = dict(zip(sentences, [str(i) for i in inf]))
-    return sent_dict
+    return sent_dict, topics
 
 
 def _analyse_intent(review_sent_dict):
@@ -99,3 +103,10 @@ def _analyse_intent(review_sent_dict):
         intent = trainer.predict(matrix)
         intent_dict = dict(zip(sentences, [str(i) for i in intent]))
     return intent_dict
+
+
+def _analyse_topics(matrix):
+    topics = []
+    for vector in matrix:
+        topics.append(calculate_topic(vector))
+    return list(set([item for sublist in topics for item in sublist]))

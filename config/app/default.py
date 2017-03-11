@@ -1,3 +1,4 @@
+"""Defines static variables."""
 import os
 
 SECRET_KEY = "oijfdoijsaoifjaosijdoija"
@@ -31,4 +32,3 @@ KMEANS_MODEL = os.path.join(PICKLE_FOLDER, 'kmeans_model_all')
 SENTIMENT_SCORE = os.path.join(SCORES_FOLDER, 'sentiment_score')
 INF_SCORE = os.path.join(SCORES_FOLDER, 'inf_score')
 INTENT_SCORE = os.path.join(SCORES_FOLDER, 'intent_score')
-
